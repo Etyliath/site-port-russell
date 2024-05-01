@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const userRoute = require('./users');
+const catwayRoute = require('./catways')
 
 /* GET home page. */
 router.get("/version", async (req, res, next) => {
@@ -20,5 +21,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/users', userRoute);
+router.get('/catways', catwayRoute);
 
 module.exports = router;

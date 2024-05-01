@@ -2,7 +2,9 @@ const User = require("../models/users");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-
+/**
+ * 
+ */
 exports.getAllUser = (req, res, next) => {
   User.find()
       .then(users =>res.status(200).json(users))
